@@ -1,0 +1,5 @@
+module Servo_Controller (clk, adc, motor);
+
+input clk;
+input [7:0] adc;
+output wire motor;
