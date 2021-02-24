@@ -1,1 +1,1 @@
-## Protesis mechatronica
+## Protesis mecatrónica
