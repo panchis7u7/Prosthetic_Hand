@@ -1,6 +1,6 @@
 Flow report for Servo_Controller
-Tue Dec 22 20:02:28 2020
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Fri Jul  9 15:23:49 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -21,7 +21,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2019  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 22 20:02:24 2020       ;
-; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Flow Status                        ; Successful - Fri Jul  9 15:23:47 2021       ;
+; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Servo_Controller                            ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6E22C8                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 91 / 6,272 ( 1 % )                          ;
-;     Total combinational functions  ; 88 / 6,272 ( 1 % )                          ;
-;     Dedicated logic registers      ; 28 / 6,272 ( < 1 % )                        ;
-; Total registers                    ; 28                                          ;
-; Total pins                         ; 10 / 92 ( 11 % )                            ;
+; Total logic elements               ; 87 / 6,272 ( 1 % )                          ;
+;     Total combinational functions  ; 86 / 6,272 ( 1 % )                          ;
+;     Dedicated logic registers      ; 56 / 6,272 ( < 1 % )                        ;
+; Total registers                    ; 56                                          ;
+; Total pins                         ; 11 / 92 ( 12 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 276,480 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                              ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/22/2020 20:02:08 ;
+; Start date & time ; 07/09/2021 15:23:31 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Servo_Controller    ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+------------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value    ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+------------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 273549556551941.160868892816784        ; --               ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 172308987861305.162586221143411        ; --               ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --               ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --               ; --          ; --         ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --               ; --          ; --         ;
@@ -95,24 +95,24 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4763 MB             ; 00:00:23                           ;
-; Fitter               ; 00:00:04     ; 1.0                     ; 5507 MB             ; 00:00:05                           ;
-; Assembler            ; 00:00:00     ; 1.0                     ; 4679 MB             ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4752 MB             ; 00:00:02                           ;
-; Total                ; 00:00:15     ; --                      ; --                  ; 00:00:31                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 428 MB              ; 00:00:25                           ;
+; Fitter               ; 00:00:04     ; 1.0                     ; 943 MB              ; 00:00:05                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 354 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 444 MB              ; 00:00:01                           ;
+; Total                ; 00:00:16     ; --                      ; --                  ; 00:00:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; Alienware2000    ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; Alienware2000    ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; Alienware2000    ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; Alienware2000    ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++----------------------+------------------+--------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name      ; OS Version ; Processor type ;
++----------------------+------------------+--------------+------------+----------------+
+; Analysis & Synthesis ; Alienware-15     ; Ubuntu 21.04 ; 21         ; x86_64         ;
+; Fitter               ; Alienware-15     ; Ubuntu 21.04 ; 21         ; x86_64         ;
+; Assembler            ; Alienware-15     ; Ubuntu 21.04 ; 21         ; x86_64         ;
+; Timing Analyzer      ; Alienware-15     ; Ubuntu 21.04 ; 21         ; x86_64         ;
++----------------------+------------------+--------------+------------+----------------+
 
 
 ------------

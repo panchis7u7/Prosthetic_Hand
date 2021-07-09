@@ -1,4 +1,4 @@
- -- Copyright (C) 2019  Intel Corporation. All rights reserved.
+ -- Copyright (C) 2020  Intel Corporation. All rights reserved.
  -- Your use of Intel Corporation's design tools, logic functions 
  -- and other software and tools, and any partner logic 
  -- functions, and any output files from any of the foregoing 
@@ -64,7 +64,7 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 CHIP  "Servo_Controller"  ASSIGNED TO AN: EP4CE6E22C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
@@ -209,8 +209,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : 137       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : 138       :        :                   :         : 8         :                
 VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
 GND                          : 140       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 141       :        :                   :         : 8         :                
+adc_clk                      : 141       : output : 2.5 V             :         : 8         : Y              
 adc[0]                       : 142       : input  : 2.5 V             :         : 8         : Y              
-pwm                          : 143       : output : 2.5 V             :         : 8         : Y              
+servo_divider_clk            : 143       : output : 2.5 V             :         : 8         : Y              
 adc[2]                       : 144       : input  : 2.5 V             :         : 8         : Y              
 GND                          : EPAD      :        :                   :         :           :                

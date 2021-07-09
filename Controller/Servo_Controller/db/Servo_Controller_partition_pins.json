@@ -4,39 +4,11 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "pwm",
+					"name" : "adc_clk",
 					"strict" : false
 				},
 				{
-					"name" : "adc[7]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[6]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[5]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[4]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[3]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[2]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[1]",
-					"strict" : false
-				},
-				{
-					"name" : "adc[0]",
+					"name" : "servo_divider_clk",
 					"strict" : false
 				},
 				{
