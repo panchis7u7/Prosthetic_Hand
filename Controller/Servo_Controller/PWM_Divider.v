@@ -1,5 +1,6 @@
 module PWM_Divider
-#(parameter DIVISOR = 28'd1000000, DUTY_CYCLE = 7'd50) (
+#(parameter DIVISOR = 28'd1000000, 
+parameter DUTY_CYCLE = 7'd50) (
 	input wire clk,
 	output wire pwm
 );

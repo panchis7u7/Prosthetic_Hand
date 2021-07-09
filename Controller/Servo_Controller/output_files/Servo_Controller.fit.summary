@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri Jul  9 15:23:45 2021
+Fitter Status : Successful - Fri Jul  9 17:13:48 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Servo_Controller
 Top-level Entity Name : Top
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 87 / 6,272 ( 1 % )
-    Total combinational functions : 86 / 6,272 ( 1 % )
+Total logic elements : 85 / 6,272 ( 1 % )
+    Total combinational functions : 84 / 6,272 ( 1 % )
     Dedicated logic registers : 56 / 6,272 ( < 1 % )
 Total registers : 56
 Total pins : 11 / 92 ( 12 % )

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Servo_Controller
-Fri Jul  9 15:23:40 2021
+Fri Jul  9 17:13:43 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -45,13 +45,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jul  9 15:23:40 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Jul  9 17:13:43 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Servo_Controller                            ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 86                                          ;
-;     Total combinational functions  ; 86                                          ;
+; Total logic elements               ; 84                                          ;
+;     Total combinational functions  ; 84                                          ;
 ;     Dedicated logic registers      ; 56                                          ;
 ; Total registers                    ; 56                                          ;
 ; Total pins                         ; 11                                          ;
@@ -181,16 +181,16 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 86        ;
+; Estimated Total logic elements              ; 84        ;
 ;                                             ;           ;
-; Total combinational functions               ; 86        ;
+; Total combinational functions               ; 84        ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 27        ;
-;     -- 3 input functions                    ; 3         ;
+;     -- 3 input functions                    ; 1         ;
 ;     -- <=2 input functions                  ; 56        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 32        ;
+;     -- normal mode                          ; 30        ;
 ;     -- arithmetic mode                      ; 54        ;
 ;                                             ;           ;
 ; Total registers                             ; 56        ;
@@ -203,8 +203,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 56        ;
-; Total fan-out                               ; 408       ;
-; Average fan-out                             ; 2.49      ;
+; Total fan-out                               ; 402       ;
+; Average fan-out                             ; 2.48      ;
 +---------------------------------------------+-----------+
 
 
@@ -213,9 +213,9 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Entity Name ; Library Name ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+-------------+--------------+
-; |Top                               ; 86 (0)              ; 56 (0)                    ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |Top                               ; Top         ; work         ;
+; |Top                               ; 84 (0)              ; 56 (0)                    ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |Top                               ; Top         ; work         ;
 ;    |PWM_Divider:adc_clk_divider|   ; 39 (39)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:adc_clk_divider   ; PWM_Divider ; work         ;
-;    |PWM_Divider:servo_clk_divider| ; 47 (47)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider ; PWM_Divider ; work         ;
+;    |PWM_Divider:servo_clk_divider| ; 45 (45)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider ; PWM_Divider ; work         ;
 +------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -252,7 +252,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value                        ; Type                       ;
 +----------------+------------------------------+----------------------------+
 ; DIVISOR        ; 0000000011110100001001000000 ; Unsigned Binary            ;
-; DUTY_CYCLE     ; 1011010                      ; Unsigned Binary            ;
+; DUTY_CYCLE     ; 0110010                      ; Unsigned Binary            ;
 +----------------+------------------------------+----------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -265,16 +265,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; boundary_port         ; 11                          ;
 ; cycloneiii_ff         ; 56                          ;
 ;     SCLR              ; 56                          ;
-; cycloneiii_lcell_comb ; 88                          ;
+; cycloneiii_lcell_comb ; 86                          ;
 ;     arith             ; 54                          ;
 ;         2 data inputs ; 54                          ;
-;     normal            ; 34                          ;
+;     normal            ; 32                          ;
 ;         1 data inputs ; 4                           ;
-;         3 data inputs ; 3                           ;
+;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 27                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 3.35                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.41                        ;
 +-----------------------+-----------------------------+
 
 
@@ -293,7 +293,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Fri Jul  9 15:23:31 2021
+    Info: Processing started: Fri Jul  9 17:13:33 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Servo_Controller -c Servo_Controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -304,30 +304,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file Servo_C
 Info (12021): Found 1 design units, including 1 entities, in source file PWM_Divider.v
     Info (12023): Found entity 1: PWM_Divider File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 1
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:adc_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 9
-Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(16): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
-Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:servo_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 11
-Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(16): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:adc_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 11
+Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(17): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 17
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:servo_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 14
+Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(17): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 17
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 8 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "adc[0]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[1]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[2]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[3]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[4]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[5]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[6]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-    Warning (15610): No output dependent on input pin "adc[7]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
-Info (21057): Implemented 97 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "input_adc[0]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[1]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[2]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[3]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[4]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[5]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[6]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+    Warning (15610): No output dependent on input pin "input_adc[7]" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 3
+Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 86 logic cells
+    Info (21061): Implemented 84 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 429 megabytes
-    Info: Processing ended: Fri Jul  9 15:23:40 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:25
+    Info: Peak virtual memory: 432 megabytes
+    Info: Processing ended: Fri Jul  9 17:13:43 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:26
 
 

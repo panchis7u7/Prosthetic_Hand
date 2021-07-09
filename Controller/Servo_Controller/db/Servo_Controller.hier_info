@@ -1,13 +1,13 @@
 |Top
 clk => clk.IN2
-adc[0] => ~NO_FANOUT~
-adc[1] => ~NO_FANOUT~
-adc[2] => ~NO_FANOUT~
-adc[3] => ~NO_FANOUT~
-adc[4] => ~NO_FANOUT~
-adc[5] => ~NO_FANOUT~
-adc[6] => ~NO_FANOUT~
-adc[7] => ~NO_FANOUT~
+input_adc[0] => ~NO_FANOUT~
+input_adc[1] => ~NO_FANOUT~
+input_adc[2] => ~NO_FANOUT~
+input_adc[3] => ~NO_FANOUT~
+input_adc[4] => ~NO_FANOUT~
+input_adc[5] => ~NO_FANOUT~
+input_adc[6] => ~NO_FANOUT~
+input_adc[7] => ~NO_FANOUT~
 adc_clk <= PWM_Divider:adc_clk_divider.port1
 servo_divider_clk <= PWM_Divider:servo_clk_divider.port1
 
