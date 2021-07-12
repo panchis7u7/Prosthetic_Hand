@@ -1,18 +1,19 @@
 |Top
 clk => clk.IN2
-input_adc[0] => ~NO_FANOUT~
-input_adc[1] => ~NO_FANOUT~
-input_adc[2] => ~NO_FANOUT~
-input_adc[3] => ~NO_FANOUT~
-input_adc[4] => ~NO_FANOUT~
-input_adc[5] => ~NO_FANOUT~
-input_adc[6] => ~NO_FANOUT~
-input_adc[7] => ~NO_FANOUT~
-adc_clk <= PWM_Divider:adc_clk_divider.port1
-servo_divider_clk <= PWM_Divider:servo_clk_divider.port1
+input_adc[0] => input_adc[0].IN1
+input_adc[1] => input_adc[1].IN1
+input_adc[2] => input_adc[2].IN1
+input_adc[3] => input_adc[3].IN1
+input_adc[4] => input_adc[4].IN1
+input_adc[5] => input_adc[5].IN1
+input_adc[6] => input_adc[6].IN1
+input_adc[7] => input_adc[7].IN1
+adc_clk << PWM_Divider:adc_clk_divider.port2
+servo_divider_clk << PWM_Divider:servo_clk_divider.port2
 
 
 |Top|PWM_Divider:adc_clk_divider
+clk => pwm~reg0.CLK
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -41,10 +42,19 @@ clk => counter[24].CLK
 clk => counter[25].CLK
 clk => counter[26].CLK
 clk => counter[27].CLK
-pwm <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+adc[0] => ~NO_FANOUT~
+adc[1] => ~NO_FANOUT~
+adc[2] => ~NO_FANOUT~
+adc[3] => ~NO_FANOUT~
+adc[4] => ~NO_FANOUT~
+adc[5] => ~NO_FANOUT~
+adc[6] => ~NO_FANOUT~
+adc[7] => ~NO_FANOUT~
+pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top|PWM_Divider:servo_clk_divider
+clk => pwm~reg0.CLK
 clk => counter[0].CLK
 clk => counter[1].CLK
 clk => counter[2].CLK
@@ -73,6 +83,14 @@ clk => counter[24].CLK
 clk => counter[25].CLK
 clk => counter[26].CLK
 clk => counter[27].CLK
-pwm <= LessThan1.DB_MAX_OUTPUT_PORT_TYPE
+adc[0] => Mult0.IN16
+adc[1] => Mult0.IN15
+adc[2] => Mult0.IN14
+adc[3] => Mult0.IN13
+adc[4] => Mult0.IN12
+adc[5] => Mult0.IN11
+adc[6] => Mult0.IN10
+adc[7] => Mult0.IN9
+pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

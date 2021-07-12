@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Jul  9 17:13:43 2021
+Analysis & Synthesis Status : Successful - Mon Jul 12 09:18:31 2021
 Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 Revision Name : Servo_Controller
 Top-level Entity Name : Top
 Family : Cyclone IV E
-Total logic elements : 84
-    Total combinational functions : 84
-    Dedicated logic registers : 56
-Total registers : 56
+Total logic elements : 128
+    Total combinational functions : 128
+    Dedicated logic registers : 58
+Total registers : 58
 Total pins : 11
 Total virtual pins : 0
 Total memory bits : 0
