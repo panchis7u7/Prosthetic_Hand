@@ -1,15 +1,38 @@
 |Top
 clk => clk.IN2
-input_adc[0] => input_adc[0].IN1
-input_adc[1] => input_adc[1].IN1
-input_adc[2] => input_adc[2].IN1
-input_adc[3] => input_adc[3].IN1
-input_adc[4] => input_adc[4].IN1
-input_adc[5] => input_adc[5].IN1
-input_adc[6] => input_adc[6].IN1
-input_adc[7] => input_adc[7].IN1
-adc_clk << PWM_Divider:adc_clk_divider.port2
-servo_divider_clk << PWM_Divider:servo_clk_divider.port2
+input_adc[0] => input_adc[0].IN2
+input_adc[1] => input_adc[1].IN2
+input_adc[2] => input_adc[2].IN2
+input_adc[3] => input_adc[3].IN2
+input_adc[4] => input_adc[4].IN2
+input_adc[5] => input_adc[5].IN2
+input_adc[6] => input_adc[6].IN2
+input_adc[7] => input_adc[7].IN2
+adc_clk <= PWM_Divider:adc_clk_divider.port2
+servo_divider_clk <= PWM_Divider:servo_clk_divider.port2
+
+
+|Top|Byte_BCD_Converter:converter
+byte[0] => ~NO_FANOUT~
+byte[1] => ~NO_FANOUT~
+byte[2] => ~NO_FANOUT~
+byte[3] => ~NO_FANOUT~
+byte[4] => ~NO_FANOUT~
+byte[5] => ~NO_FANOUT~
+byte[6] => ~NO_FANOUT~
+byte[7] => ~NO_FANOUT~
+bcd[0] <= <GND>
+bcd[1] <= <GND>
+bcd[2] <= <GND>
+bcd[3] <= <GND>
+bcd[4] <= <GND>
+bcd[5] <= <GND>
+bcd[6] <= <GND>
+bcd[7] <= <GND>
+bcd[8] <= <GND>
+bcd[9] <= <GND>
+bcd[10] <= <GND>
+bcd[11] <= <GND>
 
 
 |Top|PWM_Divider:adc_clk_divider

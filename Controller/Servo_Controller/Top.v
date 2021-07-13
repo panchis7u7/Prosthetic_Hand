@@ -5,6 +5,8 @@ module Top (
 	output servo_divider_clk
 );
 
+Byte_BCD_Converter converter (input_adc);
+
 PWM_Divider #(.DIVISOR(28'd78))	//50MHz/640KHz.
 adc_clk_divider (clk, 8'd0, adc_clk);
 

@@ -1,5 +1,5 @@
 Timing Analyzer report for Servo_Controller
-Mon Jul 12 09:18:40 2021
+Tue Jul 13 13:41:58 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -99,12 +99,12 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.03        ;
+; Average used               ; 1.04        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.9%      ;
+;     Processor 2            ;   2.0%      ;
 ;     Processor 3            ;   0.8%      ;
 ;     Processor 4            ;   0.8%      ;
 +----------------------------+-------------+
@@ -293,8 +293,8 @@ No paths to report.
 ; 0.618 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[14] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.408      ;
 ; 0.619 ; PWM_Divider:servo_clk_divider|counter[3]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.578      ; 1.409      ;
 ; 0.622 ; PWM_Divider:servo_clk_divider|counter[24] ; PWM_Divider:servo_clk_divider|counter[26] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.412      ;
-; 0.628 ; PWM_Divider:servo_clk_divider|counter[10] ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.418      ;
 ; 0.628 ; PWM_Divider:adc_clk_divider|counter[14]   ; PWM_Divider:adc_clk_divider|counter[15]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.418      ;
+; 0.628 ; PWM_Divider:servo_clk_divider|counter[10] ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.418      ;
 ; 0.629 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[9]  ; clk          ; clk         ; 0.000        ; 0.578      ; 1.419      ;
 ; 0.630 ; PWM_Divider:adc_clk_divider|counter[24]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.420      ;
 ; 0.630 ; PWM_Divider:adc_clk_divider|counter[26]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.420      ;
@@ -313,28 +313,28 @@ No paths to report.
 ; 0.742 ; PWM_Divider:servo_clk_divider|counter[19] ; PWM_Divider:servo_clk_divider|counter[19] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.055      ;
 ; 0.743 ; PWM_Divider:adc_clk_divider|counter[9]    ; PWM_Divider:adc_clk_divider|counter[9]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.036      ;
 ; 0.743 ; PWM_Divider:adc_clk_divider|counter[17]   ; PWM_Divider:adc_clk_divider|counter[17]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.036      ;
-; 0.744 ; PWM_Divider:servo_clk_divider|counter[16] ; PWM_Divider:servo_clk_divider|counter[16] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.057      ;
-; 0.744 ; PWM_Divider:servo_clk_divider|counter[14] ; PWM_Divider:servo_clk_divider|counter[14] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.057      ;
-; 0.744 ; PWM_Divider:servo_clk_divider|counter[23] ; PWM_Divider:servo_clk_divider|counter[26] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.534      ;
 ; 0.744 ; PWM_Divider:adc_clk_divider|counter[19]   ; PWM_Divider:adc_clk_divider|counter[19]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.037      ;
 ; 0.744 ; PWM_Divider:adc_clk_divider|counter[25]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.056      ;
 ; 0.744 ; PWM_Divider:adc_clk_divider|counter[5]    ; PWM_Divider:adc_clk_divider|counter[5]    ; clk          ; clk         ; 0.000        ; 0.100      ; 1.056      ;
-; 0.745 ; PWM_Divider:servo_clk_divider|counter[18] ; PWM_Divider:servo_clk_divider|counter[18] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.058      ;
+; 0.744 ; PWM_Divider:servo_clk_divider|counter[16] ; PWM_Divider:servo_clk_divider|counter[16] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.057      ;
+; 0.744 ; PWM_Divider:servo_clk_divider|counter[14] ; PWM_Divider:servo_clk_divider|counter[14] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.057      ;
+; 0.744 ; PWM_Divider:servo_clk_divider|counter[23] ; PWM_Divider:servo_clk_divider|counter[26] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.534      ;
 ; 0.745 ; PWM_Divider:adc_clk_divider|counter[7]    ; PWM_Divider:adc_clk_divider|counter[7]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.038      ;
-; 0.746 ; PWM_Divider:servo_clk_divider|counter[25] ; PWM_Divider:servo_clk_divider|counter[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
+; 0.745 ; PWM_Divider:servo_clk_divider|counter[18] ; PWM_Divider:servo_clk_divider|counter[18] ; clk          ; clk         ; 0.000        ; 0.101      ; 1.058      ;
 ; 0.746 ; PWM_Divider:adc_clk_divider|counter[16]   ; PWM_Divider:adc_clk_divider|counter[16]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
 ; 0.746 ; PWM_Divider:adc_clk_divider|counter[6]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.100      ; 1.058      ;
 ; 0.746 ; PWM_Divider:adc_clk_divider|counter[7]    ; PWM_Divider:adc_clk_divider|counter[10]   ; clk          ; clk         ; 0.000        ; 0.574      ; 1.532      ;
-; 0.747 ; PWM_Divider:servo_clk_divider|counter[20] ; PWM_Divider:servo_clk_divider|counter[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
-; 0.747 ; PWM_Divider:servo_clk_divider|counter[23] ; PWM_Divider:servo_clk_divider|counter[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
-; 0.747 ; PWM_Divider:servo_clk_divider|counter[27] ; PWM_Divider:servo_clk_divider|counter[27] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.746 ; PWM_Divider:servo_clk_divider|counter[25] ; PWM_Divider:servo_clk_divider|counter[25] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.039      ;
 ; 0.747 ; PWM_Divider:adc_clk_divider|counter[18]   ; PWM_Divider:adc_clk_divider|counter[18]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
 ; 0.747 ; PWM_Divider:adc_clk_divider|counter[20]   ; PWM_Divider:adc_clk_divider|counter[20]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
 ; 0.747 ; PWM_Divider:adc_clk_divider|counter[21]   ; PWM_Divider:adc_clk_divider|counter[21]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.747 ; PWM_Divider:servo_clk_divider|counter[20] ; PWM_Divider:servo_clk_divider|counter[20] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.747 ; PWM_Divider:servo_clk_divider|counter[23] ; PWM_Divider:servo_clk_divider|counter[23] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.747 ; PWM_Divider:servo_clk_divider|counter[27] ; PWM_Divider:servo_clk_divider|counter[27] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.040      ;
+; 0.749 ; PWM_Divider:adc_clk_divider|counter[22]   ; PWM_Divider:adc_clk_divider|counter[22]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.042      ;
 ; 0.749 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[15] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.539      ;
 ; 0.749 ; PWM_Divider:servo_clk_divider|counter[22] ; PWM_Divider:servo_clk_divider|counter[22] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.042      ;
 ; 0.749 ; PWM_Divider:servo_clk_divider|counter[24] ; PWM_Divider:servo_clk_divider|counter[24] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.042      ;
-; 0.749 ; PWM_Divider:adc_clk_divider|counter[22]   ; PWM_Divider:adc_clk_divider|counter[22]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.042      ;
 ; 0.750 ; PWM_Divider:servo_clk_divider|counter[3]  ; PWM_Divider:servo_clk_divider|counter[5]  ; clk          ; clk         ; 0.000        ; 0.578      ; 1.540      ;
 ; 0.751 ; PWM_Divider:servo_clk_divider|counter[4]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.101      ; 1.064      ;
 ; 0.751 ; PWM_Divider:servo_clk_divider|counter[5]  ; PWM_Divider:servo_clk_divider|counter[5]  ; clk          ; clk         ; 0.000        ; 0.101      ; 1.064      ;
@@ -344,29 +344,29 @@ No paths to report.
 ; 0.758 ; PWM_Divider:servo_clk_divider|counter[7]  ; PWM_Divider:servo_clk_divider|counter[9]  ; clk          ; clk         ; 0.000        ; 0.578      ; 1.548      ;
 ; 0.758 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[16] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.548      ;
 ; 0.760 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[13] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.053      ;
-; 0.761 ; PWM_Divider:servo_clk_divider|counter[3]  ; PWM_Divider:servo_clk_divider|counter[3]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.761 ; PWM_Divider:adc_clk_divider|counter[1]    ; PWM_Divider:adc_clk_divider|counter[1]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.761 ; PWM_Divider:adc_clk_divider|counter[3]    ; PWM_Divider:adc_clk_divider|counter[3]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.761 ; PWM_Divider:adc_clk_divider|counter[11]   ; PWM_Divider:adc_clk_divider|counter[11]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; PWM_Divider:servo_clk_divider|counter[3]  ; PWM_Divider:servo_clk_divider|counter[3]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.054      ;
 ; 0.762 ; PWM_Divider:servo_clk_divider|counter[22] ; PWM_Divider:servo_clk_divider|counter[26] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.552      ;
 ; 0.763 ; PWM_Divider:adc_clk_divider|counter[4]    ; PWM_Divider:adc_clk_divider|counter[4]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.056      ;
 ; 0.763 ; PWM_Divider:adc_clk_divider|counter[3]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.574      ; 1.549      ;
-; 0.764 ; PWM_Divider:servo_clk_divider|counter[10] ; PWM_Divider:servo_clk_divider|counter[10] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
-; 0.764 ; PWM_Divider:servo_clk_divider|counter[12] ; PWM_Divider:servo_clk_divider|counter[12] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
 ; 0.764 ; PWM_Divider:adc_clk_divider|counter[2]    ; PWM_Divider:adc_clk_divider|counter[2]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
 ; 0.764 ; PWM_Divider:adc_clk_divider|counter[12]   ; PWM_Divider:adc_clk_divider|counter[12]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
 ; 0.764 ; PWM_Divider:adc_clk_divider|counter[14]   ; PWM_Divider:adc_clk_divider|counter[14]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
 ; 0.764 ; PWM_Divider:adc_clk_divider|counter[23]   ; PWM_Divider:adc_clk_divider|counter[23]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
-; 0.765 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[8]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.764 ; PWM_Divider:servo_clk_divider|counter[10] ; PWM_Divider:servo_clk_divider|counter[10] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; PWM_Divider:servo_clk_divider|counter[12] ; PWM_Divider:servo_clk_divider|counter[12] ; clk          ; clk         ; 0.000        ; 0.081      ; 1.057      ;
 ; 0.765 ; PWM_Divider:adc_clk_divider|counter[8]    ; PWM_Divider:adc_clk_divider|counter[8]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[8]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.058      ;
 ; 0.766 ; PWM_Divider:adc_clk_divider|counter[24]   ; PWM_Divider:adc_clk_divider|counter[24]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
 ; 0.766 ; PWM_Divider:adc_clk_divider|counter[26]   ; PWM_Divider:adc_clk_divider|counter[26]   ; clk          ; clk         ; 0.000        ; 0.081      ; 1.059      ;
 ; 0.767 ; PWM_Divider:adc_clk_divider|counter[12]   ; PWM_Divider:adc_clk_divider|counter[15]   ; clk          ; clk         ; 0.000        ; 0.579      ; 1.558      ;
 ; 0.768 ; PWM_Divider:servo_clk_divider|counter[12] ; PWM_Divider:servo_clk_divider|counter[15] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.558      ;
-; 0.769 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.559      ;
 ; 0.769 ; PWM_Divider:adc_clk_divider|counter[27]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.100      ; 1.081      ;
-; 0.770 ; PWM_Divider:servo_clk_divider|counter[7]  ; PWM_Divider:servo_clk_divider|counter[7]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.063      ;
+; 0.769 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.559      ;
 ; 0.770 ; PWM_Divider:adc_clk_divider|counter[24]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.560      ;
+; 0.770 ; PWM_Divider:servo_clk_divider|counter[7]  ; PWM_Divider:servo_clk_divider|counter[7]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.063      ;
 ; 0.772 ; PWM_Divider:adc_clk_divider|counter[2]    ; PWM_Divider:adc_clk_divider|counter[5]    ; clk          ; clk         ; 0.000        ; 0.574      ; 1.558      ;
 ; 0.773 ; PWM_Divider:servo_clk_divider|counter[6]  ; PWM_Divider:servo_clk_divider|counter[6]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.066      ;
 ; 0.777 ; PWM_Divider:servo_clk_divider|counter[0]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.578      ; 1.567      ;
@@ -376,11 +376,11 @@ No paths to report.
 ; 0.781 ; PWM_Divider:adc_clk_divider|counter[2]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.574      ; 1.567      ;
 ; 0.782 ; PWM_Divider:servo_clk_divider|counter[1]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.578      ; 1.572      ;
 ; 0.784 ; PWM_Divider:servo_clk_divider|counter[1]  ; PWM_Divider:servo_clk_divider|counter[1]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.077      ;
-; 0.787 ; PWM_Divider:servo_clk_divider|counter[0]  ; PWM_Divider:servo_clk_divider|counter[0]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.080      ;
 ; 0.787 ; PWM_Divider:adc_clk_divider|counter[0]    ; PWM_Divider:adc_clk_divider|counter[0]    ; clk          ; clk         ; 0.000        ; 0.081      ; 1.080      ;
+; 0.787 ; PWM_Divider:servo_clk_divider|counter[0]  ; PWM_Divider:servo_clk_divider|counter[0]  ; clk          ; clk         ; 0.000        ; 0.081      ; 1.080      ;
 ; 0.875 ; PWM_Divider:adc_clk_divider|counter[21]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.665      ;
-; 0.889 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[17] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.679      ;
 ; 0.889 ; PWM_Divider:adc_clk_divider|counter[11]   ; PWM_Divider:adc_clk_divider|counter[15]   ; clk          ; clk         ; 0.000        ; 0.579      ; 1.680      ;
+; 0.889 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[17] ; clk          ; clk         ; 0.000        ; 0.578      ; 1.679      ;
 ; 0.891 ; PWM_Divider:adc_clk_divider|counter[20]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.681      ;
 ; 0.892 ; PWM_Divider:adc_clk_divider|counter[23]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.682      ;
 ; 0.893 ; PWM_Divider:adc_clk_divider|counter[22]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.578      ; 1.683      ;
@@ -567,8 +567,8 @@ No paths to report.
 ; 0.561 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[9]  ; clk          ; clk         ; 0.000        ; 0.540      ; 1.296      ;
 ; 0.563 ; PWM_Divider:adc_clk_divider|counter[4]    ; PWM_Divider:adc_clk_divider|counter[5]    ; clk          ; clk         ; 0.000        ; 0.536      ; 1.294      ;
 ; 0.564 ; PWM_Divider:adc_clk_divider|counter[14]   ; PWM_Divider:adc_clk_divider|counter[15]   ; clk          ; clk         ; 0.000        ; 0.536      ; 1.295      ;
-; 0.566 ; PWM_Divider:adc_clk_divider|counter[26]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.536      ; 1.297      ;
 ; 0.566 ; PWM_Divider:servo_clk_divider|counter[24] ; PWM_Divider:servo_clk_divider|counter[26] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.301      ;
+; 0.566 ; PWM_Divider:adc_clk_divider|counter[26]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.536      ; 1.297      ;
 ; 0.567 ; PWM_Divider:adc_clk_divider|counter[24]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.536      ; 1.298      ;
 ; 0.577 ; PWM_Divider:servo_clk_divider|counter[12] ; PWM_Divider:servo_clk_divider|counter[14] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.312      ;
 ; 0.578 ; PWM_Divider:adc_clk_divider|counter[4]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.536      ; 1.309      ;
@@ -588,47 +588,47 @@ No paths to report.
 ; 0.681 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[16] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.416      ;
 ; 0.682 ; PWM_Divider:servo_clk_divider|counter[12] ; PWM_Divider:servo_clk_divider|counter[15] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.417      ;
 ; 0.683 ; PWM_Divider:servo_clk_divider|counter[8]  ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.418      ;
+; 0.685 ; PWM_Divider:servo_clk_divider|counter[11] ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.972      ;
 ; 0.685 ; PWM_Divider:adc_clk_divider|counter[12]   ; PWM_Divider:adc_clk_divider|counter[15]   ; clk          ; clk         ; 0.000        ; 0.537      ; 1.417      ;
 ; 0.685 ; PWM_Divider:adc_clk_divider|counter[3]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.536      ; 1.416      ;
-; 0.685 ; PWM_Divider:servo_clk_divider|counter[11] ; PWM_Divider:servo_clk_divider|counter[11] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.972      ;
 ; 0.686 ; PWM_Divider:servo_clk_divider|counter[17] ; PWM_Divider:servo_clk_divider|counter[17] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.973      ;
 ; 0.686 ; PWM_Divider:servo_clk_divider|counter[19] ; PWM_Divider:servo_clk_divider|counter[19] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.973      ;
 ; 0.686 ; PWM_Divider:servo_clk_divider|counter[9]  ; PWM_Divider:servo_clk_divider|counter[9]  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.973      ;
 ; 0.686 ; PWM_Divider:servo_clk_divider|counter[22] ; PWM_Divider:servo_clk_divider|counter[26] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.421      ;
 ; 0.687 ; PWM_Divider:adc_clk_divider|counter[2]    ; PWM_Divider:adc_clk_divider|counter[5]    ; clk          ; clk         ; 0.000        ; 0.536      ; 1.418      ;
-; 0.688 ; PWM_Divider:adc_clk_divider|counter[25]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.974      ;
 ; 0.688 ; PWM_Divider:servo_clk_divider|counter[15] ; PWM_Divider:servo_clk_divider|counter[15] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.975      ;
+; 0.688 ; PWM_Divider:adc_clk_divider|counter[25]   ; PWM_Divider:adc_clk_divider|counter[25]   ; clk          ; clk         ; 0.000        ; 0.091      ; 0.974      ;
 ; 0.689 ; PWM_Divider:adc_clk_divider|counter[24]   ; PWM_Divider:adc_clk_divider|counter[27]   ; clk          ; clk         ; 0.000        ; 0.536      ; 1.420      ;
-; 0.690 ; PWM_Divider:adc_clk_divider|counter[5]    ; PWM_Divider:adc_clk_divider|counter[5]    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.976      ;
 ; 0.690 ; PWM_Divider:servo_clk_divider|counter[14] ; PWM_Divider:servo_clk_divider|counter[14] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.977      ;
+; 0.690 ; PWM_Divider:adc_clk_divider|counter[5]    ; PWM_Divider:adc_clk_divider|counter[5]    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.976      ;
 ; 0.691 ; PWM_Divider:servo_clk_divider|counter[16] ; PWM_Divider:servo_clk_divider|counter[16] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.978      ;
-; 0.692 ; PWM_Divider:adc_clk_divider|counter[9]    ; PWM_Divider:adc_clk_divider|counter[9]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.959      ;
-; 0.692 ; PWM_Divider:adc_clk_divider|counter[17]   ; PWM_Divider:adc_clk_divider|counter[17]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.959      ;
 ; 0.692 ; PWM_Divider:servo_clk_divider|counter[18] ; PWM_Divider:servo_clk_divider|counter[18] ; clk          ; clk         ; 0.000        ; 0.092      ; 0.979      ;
 ; 0.692 ; PWM_Divider:servo_clk_divider|counter[25] ; PWM_Divider:servo_clk_divider|counter[25] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.961      ;
 ; 0.692 ; PWM_Divider:servo_clk_divider|counter[6]  ; PWM_Divider:servo_clk_divider|counter[9]  ; clk          ; clk         ; 0.000        ; 0.540      ; 1.427      ;
+; 0.692 ; PWM_Divider:adc_clk_divider|counter[9]    ; PWM_Divider:adc_clk_divider|counter[9]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.959      ;
+; 0.692 ; PWM_Divider:adc_clk_divider|counter[17]   ; PWM_Divider:adc_clk_divider|counter[17]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.959      ;
 ; 0.693 ; PWM_Divider:adc_clk_divider|counter[6]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.091      ; 0.979      ;
-; 0.694 ; PWM_Divider:adc_clk_divider|counter[20]   ; PWM_Divider:adc_clk_divider|counter[20]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
-; 0.694 ; PWM_Divider:adc_clk_divider|counter[19]   ; PWM_Divider:adc_clk_divider|counter[19]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
 ; 0.694 ; PWM_Divider:servo_clk_divider|counter[20] ; PWM_Divider:servo_clk_divider|counter[20] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.963      ;
 ; 0.694 ; PWM_Divider:servo_clk_divider|counter[27] ; PWM_Divider:servo_clk_divider|counter[27] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.963      ;
-; 0.695 ; PWM_Divider:adc_clk_divider|counter[7]    ; PWM_Divider:adc_clk_divider|counter[7]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
+; 0.694 ; PWM_Divider:adc_clk_divider|counter[20]   ; PWM_Divider:adc_clk_divider|counter[20]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
+; 0.694 ; PWM_Divider:adc_clk_divider|counter[19]   ; PWM_Divider:adc_clk_divider|counter[19]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.961      ;
 ; 0.695 ; PWM_Divider:servo_clk_divider|counter[23] ; PWM_Divider:servo_clk_divider|counter[23] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.964      ;
-; 0.696 ; PWM_Divider:adc_clk_divider|counter[21]   ; PWM_Divider:adc_clk_divider|counter[21]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
+; 0.695 ; PWM_Divider:adc_clk_divider|counter[7]    ; PWM_Divider:adc_clk_divider|counter[7]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.962      ;
 ; 0.696 ; PWM_Divider:servo_clk_divider|counter[22] ; PWM_Divider:servo_clk_divider|counter[22] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.965      ;
-; 0.697 ; PWM_Divider:adc_clk_divider|counter[16]   ; PWM_Divider:adc_clk_divider|counter[16]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.964      ;
+; 0.696 ; PWM_Divider:adc_clk_divider|counter[21]   ; PWM_Divider:adc_clk_divider|counter[21]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.963      ;
 ; 0.697 ; PWM_Divider:servo_clk_divider|counter[4]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.984      ;
 ; 0.697 ; PWM_Divider:servo_clk_divider|counter[5]  ; PWM_Divider:servo_clk_divider|counter[5]  ; clk          ; clk         ; 0.000        ; 0.092      ; 0.984      ;
-; 0.698 ; PWM_Divider:adc_clk_divider|counter[18]   ; PWM_Divider:adc_clk_divider|counter[18]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.965      ;
+; 0.697 ; PWM_Divider:adc_clk_divider|counter[16]   ; PWM_Divider:adc_clk_divider|counter[16]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.964      ;
 ; 0.698 ; PWM_Divider:servo_clk_divider|counter[24] ; PWM_Divider:servo_clk_divider|counter[24] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.967      ;
 ; 0.698 ; PWM_Divider:servo_clk_divider|counter[0]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.540      ; 1.433      ;
+; 0.698 ; PWM_Divider:adc_clk_divider|counter[18]   ; PWM_Divider:adc_clk_divider|counter[18]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.965      ;
 ; 0.699 ; PWM_Divider:servo_clk_divider|counter[10] ; PWM_Divider:servo_clk_divider|counter[14] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.434      ;
 ; 0.699 ; PWM_Divider:servo_clk_divider|counter[12] ; PWM_Divider:servo_clk_divider|counter[16] ; clk          ; clk         ; 0.000        ; 0.540      ; 1.434      ;
 ; 0.700 ; PWM_Divider:adc_clk_divider|counter[22]   ; PWM_Divider:adc_clk_divider|counter[22]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.967      ;
-; 0.703 ; PWM_Divider:adc_clk_divider|counter[2]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.536      ; 1.434      ;
 ; 0.703 ; PWM_Divider:servo_clk_divider|counter[3]  ; PWM_Divider:servo_clk_divider|counter[3]  ; clk          ; clk         ; 0.000        ; 0.074      ; 0.972      ;
 ; 0.703 ; PWM_Divider:servo_clk_divider|counter[13] ; PWM_Divider:servo_clk_divider|counter[13] ; clk          ; clk         ; 0.000        ; 0.074      ; 0.972      ;
 ; 0.703 ; PWM_Divider:servo_clk_divider|counter[1]  ; PWM_Divider:servo_clk_divider|counter[4]  ; clk          ; clk         ; 0.000        ; 0.540      ; 1.438      ;
+; 0.703 ; PWM_Divider:adc_clk_divider|counter[2]    ; PWM_Divider:adc_clk_divider|counter[6]    ; clk          ; clk         ; 0.000        ; 0.536      ; 1.434      ;
 ; 0.705 ; PWM_Divider:adc_clk_divider|counter[1]    ; PWM_Divider:adc_clk_divider|counter[1]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
 ; 0.705 ; PWM_Divider:adc_clk_divider|counter[3]    ; PWM_Divider:adc_clk_divider|counter[3]    ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
 ; 0.705 ; PWM_Divider:adc_clk_divider|counter[11]   ; PWM_Divider:adc_clk_divider|counter[11]   ; clk          ; clk         ; 0.000        ; 0.072      ; 0.972      ;
@@ -1121,7 +1121,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Mon Jul 12 09:18:39 2021
+    Info: Processing started: Tue Jul 13 13:41:56 2021
 Info: Command: quartus_sta Servo_Controller -c Servo_Controller
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1193,9 +1193,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 446 megabytes
-    Info: Processing ended: Mon Jul 12 09:18:40 2021
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 448 megabytes
+    Info: Processing ended: Tue Jul 13 13:41:58 2021
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 
