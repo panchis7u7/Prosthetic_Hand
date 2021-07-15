@@ -64,6 +64,10 @@ set_location_assignment PIN_2 -to input_adc[4]
 set_location_assignment PIN_1 -to input_adc[5]
 set_location_assignment PIN_144 -to input_adc[6]
 set_location_assignment PIN_142 -to input_adc[7]
+set_global_assignment -name VERILOG_FILE BCD_Cathode_Controller.v
+set_global_assignment -name VERILOG_FILE BCD_Controller.v
+set_global_assignment -name VERILOG_FILE Cathode_Controller.v
+set_global_assignment -name VERILOG_FILE Refresh_Counter.v
 set_global_assignment -name VERILOG_FILE Byte_BCD_Converter.v
 set_global_assignment -name VERILOG_FILE Seven_Segment_Display_Controller.v
 set_global_assignment -name VERILOG_FILE Top.v

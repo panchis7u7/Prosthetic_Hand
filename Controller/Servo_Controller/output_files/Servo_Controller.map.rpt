@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Servo_Controller
-Tue Jul 13 13:41:50 2021
+Thu Jul 15 18:00:05 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,15 +14,17 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: PWM_Divider:adc_clk_divider
- 10. Parameter Settings for User Entity Instance: PWM_Divider:servo_clk_divider
- 11. Parameter Settings for Inferred Entity Instance: PWM_Divider:servo_clk_divider|lpm_mult:Mult0
- 12. lpm_mult Parameter Settings by Entity Instance
- 13. Port Connectivity Checks: "PWM_Divider:adc_clk_divider"
- 14. Port Connectivity Checks: "Byte_BCD_Converter:converter"
- 15. Post-Synthesis Netlist Statistics for Top Partition
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: PWM_Divider:segment_clk_divider
+ 10. Parameter Settings for User Entity Instance: PWM_Divider:adc_clk_divider
+ 11. Parameter Settings for User Entity Instance: PWM_Divider:servo_clk_divider
+ 12. Parameter Settings for Inferred Entity Instance: PWM_Divider:servo_clk_divider|lpm_mult:Mult0
+ 13. lpm_mult Parameter Settings by Entity Instance
+ 14. Port Connectivity Checks: "PWM_Divider:adc_clk_divider"
+ 15. Port Connectivity Checks: "PWM_Divider:segment_clk_divider"
+ 16. Port Connectivity Checks: "Byte_BCD_Converter:converter"
+ 17. Post-Synthesis Netlist Statistics for Top Partition
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -49,7 +51,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jul 13 13:41:50 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 15 18:00:05 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Servo_Controller                            ;
 ; Top-level Entity Name              ; Top                                         ;
@@ -58,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ;     Total combinational functions  ; 128                                         ;
 ;     Dedicated logic registers      ; 58                                          ;
 ; Total registers                    ; 58                                          ;
-; Total pins                         ; 11                                          ;
+; Total pins                         ; 23                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -175,6 +177,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; Cathode_Controller.v             ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Cathode_Controller.v    ;         ;
 ; Byte_BCD_Converter.v             ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v    ;         ;
 ; Top.v                            ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v                   ;         ;
 ; PWM_Divider.v                    ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v           ;         ;
@@ -224,14 +227,14 @@ https://fpgasoftware.intel.com/eula.
 ;     -- Dedicated logic registers            ; 58        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 11        ;
+; I/O pins                                    ; 23        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 58        ;
-; Total fan-out                               ; 503       ;
-; Average fan-out                             ; 2.42      ;
+; Total fan-out                               ; 515       ;
+; Average fan-out                             ; 2.22      ;
 +---------------------------------------------+-----------+
 
 
@@ -240,7 +243,7 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------+
-; |Top                                           ; 128 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |Top                                                                                                                                 ; Top         ; work         ;
+; |Top                                           ; 128 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Top                                                                                                                                 ; Top         ; work         ;
 ;    |PWM_Divider:adc_clk_divider|               ; 40 (40)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:adc_clk_divider                                                                                                     ; PWM_Divider ; work         ;
 ;    |PWM_Divider:servo_clk_divider|             ; 88 (75)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider                                                                                                   ; PWM_Divider ; work         ;
 ;       |lpm_mult:Mult0|                         ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0                                                                                    ; lpm_mult    ; work         ;
@@ -265,6 +268,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PWM_Divider:segment_clk_divider ;
++----------------+------------------------------+------------------------------+
+; Parameter Name ; Value                        ; Type                         ;
++----------------+------------------------------+------------------------------+
+; DIVISOR        ; 0000000000000001001110001000 ; Unsigned Binary              ;
+; DUTY_CYCLE     ; 0110010                      ; Unsigned Binary              ;
+; DYNAMIC        ; 0                            ; Unsigned Binary              ;
++----------------+------------------------------+------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------+
@@ -355,6 +370,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PWM_Divider:segment_clk_divider"                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; adc  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pwm  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Byte_BCD_Converter:converter"                                                                            ;
 +------+--------+----------+----------------------------------------------------------------------------------------------------------+
@@ -369,23 +394,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 11                          ;
+; boundary_port         ; 23                          ;
 ; cycloneiii_ff         ; 58                          ;
 ;     SCLR              ; 56                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 128                         ;
+; cycloneiii_lcell_comb ; 130                         ;
 ;     arith             ; 100                         ;
 ;         2 data inputs ; 75                          ;
 ;         3 data inputs ; 25                          ;
-;     normal            ; 28                          ;
-;         0 data inputs ; 2                           ;
+;     normal            ; 30                          ;
+;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 2                           ;
 ;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 21                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 3.67                        ;
+; Average LUT depth     ; 3.64                        ;
 +-----------------------+-----------------------------+
 
 
@@ -404,15 +429,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Tue Jul 13 13:41:41 2021
+    Info: Processing started: Thu Jul 15 17:59:56 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Servo_Controller -c Servo_Controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file BCD_Cathode_Controller.v
+    Info (12023): Found entity 1: BCD_Cathode_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Cathode_Controller.v Line: 1
+Warning (10229): Verilog HDL Expression warning at BCD_Controller.v(15): truncated literal to match 2 bits File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 15
+Warning (10229): Verilog HDL Expression warning at BCD_Controller.v(16): truncated literal to match 2 bits File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file BCD_Controller.v
+    Info (12023): Found entity 1: BCD_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Cathode_Controller.v
+    Info (12023): Found entity 1: Cathode_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Cathode_Controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file Refresh_Counter.v
+    Info (12023): Found entity 1: Refresh_Counter File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Refresh_Counter.v Line: 1
 Warning (10463): Verilog HDL Declaration warning at Byte_BCD_Converter.v(2): "byte" is SystemVerilog-2005 keyword File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file Byte_BCD_Converter.v
     Info (12023): Found entity 1: Byte_BCD_Converter File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Seven_Segment_Display_Controller.v
-    Info (12023): Found entity 1: SegmentDisplay_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Seven_Segment_Display_Controller.v Line: 1
+    Info (12023): Found entity 1: Seven_Segment_Display_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Seven_Segment_Display_Controller.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Top.v
     Info (12023): Found entity 1: Top File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Servo_Controller_Test_Bench.v
@@ -420,10 +455,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file Servo_C
 Info (12021): Found 1 design units, including 1 entities, in source file PWM_Divider.v
     Info (12023): Found entity 1: PWM_Divider File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 1
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Info (12128): Elaborating entity "Byte_BCD_Converter" for hierarchy "Byte_BCD_Converter:converter" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 8
-Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:adc_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 11
+Warning (10034): Output port "digit_led_cathodes" at Top.v(5) has no driver File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+Info (12128): Elaborating entity "Byte_BCD_Converter" for hierarchy "Byte_BCD_Converter:converter" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 13
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:segment_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 19
 Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(18): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 18
-Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:servo_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 14
+Info (12128): Elaborating entity "Cathode_Controller" for hierarchy "Cathode_Controller:cathode_controller" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 24
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:adc_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 30
+Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(18): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 18
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:servo_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 38
 Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(16): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "PWM_Divider:servo_clk_divider|Mult0" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
@@ -445,17 +484,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/add_
     Info (12023): Found entity 1: add_sub_mgh File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/db/add_sub_mgh.tdf Line: 23
 Info (12131): Elaborated megafunction instantiation "PWM_Divider:servo_clk_divider|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "PWM_Divider:servo_clk_divider|lpm_mult:Mult0" File: /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "digit_trans_cathodes[0]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
+    Warning (13410): Pin "digit_trans_cathodes[1]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
+    Warning (13410): Pin "digit_trans_cathodes[2]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
+    Warning (13410): Pin "digit_trans_cathodes[3]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
+    Warning (13410): Pin "digit_led_cathodes[0]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[1]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[2]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[3]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[4]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[5]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[6]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[7]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 139 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 151 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 2 output pins
+    Info (21059): Implemented 14 output pins
     Info (21061): Implemented 128 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 434 megabytes
-    Info: Processing ended: Tue Jul 13 13:41:50 2021
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info: Peak virtual memory: 435 megabytes
+    Info: Processing ended: Thu Jul 15 18:00:05 2021
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 

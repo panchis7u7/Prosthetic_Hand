@@ -1,5 +1,5 @@
 |Top
-clk => clk.IN2
+clk => clk.IN3
 input_adc[0] => input_adc[0].IN2
 input_adc[1] => input_adc[1].IN2
 input_adc[2] => input_adc[2].IN2
@@ -8,8 +8,20 @@ input_adc[4] => input_adc[4].IN2
 input_adc[5] => input_adc[5].IN2
 input_adc[6] => input_adc[6].IN2
 input_adc[7] => input_adc[7].IN2
-adc_clk <= PWM_Divider:adc_clk_divider.port2
-servo_divider_clk <= PWM_Divider:servo_clk_divider.port2
+digit_trans_cathodes[0] <= Cathode_Controller:cathode_controller.cathode
+digit_trans_cathodes[1] <= Cathode_Controller:cathode_controller.cathode
+digit_trans_cathodes[2] <= Cathode_Controller:cathode_controller.cathode
+digit_trans_cathodes[3] <= Cathode_Controller:cathode_controller.cathode
+digit_led_cathodes[0] <= <GND>
+digit_led_cathodes[1] <= <GND>
+digit_led_cathodes[2] <= <GND>
+digit_led_cathodes[3] <= <GND>
+digit_led_cathodes[4] <= <GND>
+digit_led_cathodes[5] <= <GND>
+digit_led_cathodes[6] <= <GND>
+digit_led_cathodes[7] <= <GND>
+adc_clk <= PWM_Divider:adc_clk_divider.pwm
+servo_divider_clk <= PWM_Divider:servo_clk_divider.pwm
 
 
 |Top|Byte_BCD_Converter:converter
@@ -33,6 +45,56 @@ bcd[8] <= <GND>
 bcd[9] <= <GND>
 bcd[10] <= <GND>
 bcd[11] <= <GND>
+
+
+|Top|PWM_Divider:segment_clk_divider
+clk => pwm~reg0.CLK
+clk => counter[0].CLK
+clk => counter[1].CLK
+clk => counter[2].CLK
+clk => counter[3].CLK
+clk => counter[4].CLK
+clk => counter[5].CLK
+clk => counter[6].CLK
+clk => counter[7].CLK
+clk => counter[8].CLK
+clk => counter[9].CLK
+clk => counter[10].CLK
+clk => counter[11].CLK
+clk => counter[12].CLK
+clk => counter[13].CLK
+clk => counter[14].CLK
+clk => counter[15].CLK
+clk => counter[16].CLK
+clk => counter[17].CLK
+clk => counter[18].CLK
+clk => counter[19].CLK
+clk => counter[20].CLK
+clk => counter[21].CLK
+clk => counter[22].CLK
+clk => counter[23].CLK
+clk => counter[24].CLK
+clk => counter[25].CLK
+clk => counter[26].CLK
+clk => counter[27].CLK
+adc[0] => ~NO_FANOUT~
+adc[1] => ~NO_FANOUT~
+adc[2] => ~NO_FANOUT~
+adc[3] => ~NO_FANOUT~
+adc[4] => ~NO_FANOUT~
+adc[5] => ~NO_FANOUT~
+adc[6] => ~NO_FANOUT~
+adc[7] => ~NO_FANOUT~
+pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Cathode_Controller:cathode_controller
+refresh_counter[0] => Decoder0.IN1
+refresh_counter[1] => Decoder0.IN0
+cathode[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+cathode[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+cathode[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+cathode[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top|PWM_Divider:adc_clk_divider
