@@ -12,39 +12,16 @@ digit_trans_cathodes[0] <= Cathode_Controller:cathode_controller.cathode
 digit_trans_cathodes[1] <= Cathode_Controller:cathode_controller.cathode
 digit_trans_cathodes[2] <= Cathode_Controller:cathode_controller.cathode
 digit_trans_cathodes[3] <= Cathode_Controller:cathode_controller.cathode
-digit_led_cathodes[0] <= <GND>
-digit_led_cathodes[1] <= <GND>
-digit_led_cathodes[2] <= <GND>
-digit_led_cathodes[3] <= <GND>
-digit_led_cathodes[4] <= <GND>
-digit_led_cathodes[5] <= <GND>
-digit_led_cathodes[6] <= <GND>
-digit_led_cathodes[7] <= <GND>
+digit_led_cathodes[0] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[1] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[2] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[3] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[4] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[5] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[6] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
+digit_led_cathodes[7] <= BCD_Cathode_Controller:bcd_cathode_controller.digit
 adc_clk <= PWM_Divider:adc_clk_divider.pwm
 servo_divider_clk <= PWM_Divider:servo_clk_divider.pwm
-
-
-|Top|Byte_BCD_Converter:converter
-byte[0] => ~NO_FANOUT~
-byte[1] => ~NO_FANOUT~
-byte[2] => ~NO_FANOUT~
-byte[3] => ~NO_FANOUT~
-byte[4] => ~NO_FANOUT~
-byte[5] => ~NO_FANOUT~
-byte[6] => ~NO_FANOUT~
-byte[7] => ~NO_FANOUT~
-bcd[0] <= <GND>
-bcd[1] <= <GND>
-bcd[2] <= <GND>
-bcd[3] <= <GND>
-bcd[4] <= <GND>
-bcd[5] <= <GND>
-bcd[6] <= <GND>
-bcd[7] <= <GND>
-bcd[8] <= <GND>
-bcd[9] <= <GND>
-bcd[10] <= <GND>
-bcd[11] <= <GND>
 
 
 |Top|PWM_Divider:segment_clk_divider
@@ -86,15 +63,6 @@ adc[5] => ~NO_FANOUT~
 adc[6] => ~NO_FANOUT~
 adc[7] => ~NO_FANOUT~
 pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Top|Cathode_Controller:cathode_controller
-refresh_counter[0] => Decoder0.IN1
-refresh_counter[1] => Decoder0.IN0
-cathode[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-cathode[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-cathode[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
-cathode[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Top|PWM_Divider:adc_clk_divider
@@ -177,5 +145,104 @@ adc[5] => Mult0.IN11
 adc[6] => Mult0.IN10
 adc[7] => Mult0.IN9
 pwm <= pwm~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Byte_BCD_Converter:bcd_converter
+byte[0] => bcd[0].DATAIN
+byte[1] => LessThan5.IN8
+byte[1] => Add5.IN8
+byte[1] => bcd.DATAA
+byte[2] => LessThan3.IN8
+byte[2] => Add3.IN8
+byte[2] => bcd.DATAA
+byte[3] => LessThan2.IN8
+byte[3] => Add2.IN8
+byte[3] => bcd.DATAA
+byte[4] => LessThan1.IN8
+byte[4] => Add1.IN8
+byte[4] => bcd.DATAA
+byte[5] => LessThan0.IN6
+byte[5] => Add0.IN6
+byte[5] => bcd.DATAA
+byte[6] => LessThan0.IN5
+byte[6] => Add0.IN5
+byte[6] => bcd.DATAA
+byte[7] => LessThan0.IN4
+byte[7] => Add0.IN4
+byte[7] => bcd.DATAA
+bcd[0] <= byte[0].DB_MAX_OUTPUT_PORT_TYPE
+bcd[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[4] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[5] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[6] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[7] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[8] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[9] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+bcd[10] <= <GND>
+bcd[11] <= <GND>
+
+
+|Top|Refresh_Counter:refresh_counter
+clk => refresh_select[0]~reg0.CLK
+clk => refresh_select[1]~reg0.CLK
+refresh_select[0] <= refresh_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+refresh_select[1] <= refresh_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|Cathode_Controller:cathode_controller
+refresh_counter[0] => Decoder0.IN1
+refresh_counter[1] => Decoder0.IN0
+cathode[0] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+cathode[1] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+cathode[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+cathode[3] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|BCD_Controller:bcd_controller
+data_digit1[0] => Mux3.IN0
+data_digit1[1] => Mux2.IN0
+data_digit1[2] => Mux1.IN0
+data_digit1[3] => Mux0.IN0
+data_digit2[0] => Mux3.IN1
+data_digit2[1] => Mux2.IN1
+data_digit2[2] => Mux1.IN1
+data_digit2[3] => Mux0.IN1
+data_digit3[0] => Mux3.IN2
+data_digit3[1] => Mux2.IN2
+data_digit3[2] => Mux1.IN2
+data_digit3[3] => Mux0.IN2
+data_digit4[0] => Mux3.IN3
+data_digit4[1] => Mux2.IN3
+data_digit4[2] => Mux1.IN3
+data_digit4[3] => Mux0.IN3
+refresh_counter[0] => Mux0.IN5
+refresh_counter[0] => Mux1.IN5
+refresh_counter[0] => Mux2.IN5
+refresh_counter[0] => Mux3.IN5
+refresh_counter[1] => Mux0.IN4
+refresh_counter[1] => Mux1.IN4
+refresh_counter[1] => Mux2.IN4
+refresh_counter[1] => Mux3.IN4
+data_selected_digit[0] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+data_selected_digit[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+data_selected_digit[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+data_selected_digit[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Top|BCD_Cathode_Controller:bcd_cathode_controller
+selected_digit_data[0] => Decoder0.IN3
+selected_digit_data[1] => Decoder0.IN2
+selected_digit_data[2] => Decoder0.IN1
+selected_digit_data[3] => Decoder0.IN0
+digit[0] <= digit.DB_MAX_OUTPUT_PORT_TYPE
+digit[1] <= digit.DB_MAX_OUTPUT_PORT_TYPE
+digit[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+digit[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+digit[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+digit[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+digit[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+digit[7] <= <VCC>
 
 

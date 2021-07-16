@@ -4,6 +4,50 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "digit_trans_cathodes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_trans_cathodes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_trans_cathodes[2]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_trans_cathodes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[0]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[1]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[2]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[3]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[4]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[5]",
+					"strict" : false
+				},
+				{
+					"name" : "digit_led_cathodes[6]",
+					"strict" : false
+				},
+				{
 					"name" : "adc_clk",
 					"strict" : false
 				},
@@ -12,7 +56,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "input_adc[4]",
 					"strict" : false
 				},
 				{
@@ -20,15 +64,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "input_adc[6]",
-					"strict" : false
-				},
-				{
 					"name" : "input_adc[5]",
 					"strict" : false
 				},
 				{
-					"name" : "input_adc[4]",
+					"name" : "input_adc[6]",
 					"strict" : false
 				},
 				{
@@ -45,6 +85,10 @@
 				},
 				{
 					"name" : "input_adc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]

@@ -10,7 +10,7 @@ reg [3:0] i;
 always @(byte)
 begin
 	bcd = 0;
-	for(i = 0; i < 0; i = i + 1)
+	for(i = 0; i < 8; i = i + 1)
 	begin
 		bcd = {bcd[10:0], byte[7-i]};	//Concatenation.
 		if(i < 7 && bcd[3:0] > 4)

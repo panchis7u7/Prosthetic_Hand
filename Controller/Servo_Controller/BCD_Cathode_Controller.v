@@ -3,9 +3,10 @@ module BCD_Cathode_Controller(
 	output reg [7:0] digit
 );
 
-always @(digit)
+always @(selected_digit_data)
 begin
-	case(digit)
+	case(selected_digit_data)
+		//|dp|g|f|e|d|c|b|a|
 		4'd0: digit = 8'b11000000;	//Zero.
 		4'd1: digit = 8'b11111001;	//One.
 		4'd2: digit = 8'b10100100;	//Two.

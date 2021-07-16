@@ -73,4 +73,16 @@ set_global_assignment -name VERILOG_FILE Seven_Segment_Display_Controller.v
 set_global_assignment -name VERILOG_FILE Top.v
 set_global_assignment -name VERILOG_FILE Servo_Controller_Test_Bench.v
 set_global_assignment -name VERILOG_FILE PWM_Divider.v
+set_location_assignment PIN_128 -to digit_led_cathodes[0]
+set_location_assignment PIN_121 -to digit_led_cathodes[1]
+set_location_assignment PIN_125 -to digit_led_cathodes[2]
+set_location_assignment PIN_129 -to digit_led_cathodes[3]
+set_location_assignment PIN_132 -to digit_led_cathodes[4]
+set_location_assignment PIN_126 -to digit_led_cathodes[5]
+set_location_assignment PIN_124 -to digit_led_cathodes[6]
+set_location_assignment PIN_127 -to digit_led_cathodes[7]
+set_location_assignment PIN_133 -to digit_trans_cathodes[0]
+set_location_assignment PIN_135 -to digit_trans_cathodes[1]
+set_location_assignment PIN_136 -to digit_trans_cathodes[2]
+set_location_assignment PIN_137 -to digit_trans_cathodes[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Servo_Controller
-Thu Jul 15 18:00:05 2021
+Thu Jul 15 20:53:53 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -14,17 +14,18 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: PWM_Divider:segment_clk_divider
- 10. Parameter Settings for User Entity Instance: PWM_Divider:adc_clk_divider
- 11. Parameter Settings for User Entity Instance: PWM_Divider:servo_clk_divider
- 12. Parameter Settings for Inferred Entity Instance: PWM_Divider:servo_clk_divider|lpm_mult:Mult0
- 13. lpm_mult Parameter Settings by Entity Instance
- 14. Port Connectivity Checks: "PWM_Divider:adc_clk_divider"
- 15. Port Connectivity Checks: "PWM_Divider:segment_clk_divider"
- 16. Port Connectivity Checks: "Byte_BCD_Converter:converter"
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: PWM_Divider:segment_clk_divider
+ 11. Parameter Settings for User Entity Instance: PWM_Divider:adc_clk_divider
+ 12. Parameter Settings for User Entity Instance: PWM_Divider:servo_clk_divider
+ 13. Parameter Settings for Inferred Entity Instance: PWM_Divider:servo_clk_divider|lpm_mult:Mult0
+ 14. lpm_mult Parameter Settings by Entity Instance
+ 15. Port Connectivity Checks: "BCD_Controller:bcd_controller"
+ 16. Port Connectivity Checks: "PWM_Divider:adc_clk_divider"
+ 17. Port Connectivity Checks: "PWM_Divider:segment_clk_divider"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -51,15 +52,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jul 15 18:00:05 2021       ;
+; Analysis & Synthesis Status        ; Successful - Thu Jul 15 20:53:53 2021       ;
 ; Quartus Prime Version              ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                      ; Servo_Controller                            ;
 ; Top-level Entity Name              ; Top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 128                                         ;
-;     Total combinational functions  ; 128                                         ;
-;     Dedicated logic registers      ; 58                                          ;
-; Total registers                    ; 58                                          ;
+; Total logic elements               ; 217                                         ;
+;     Total combinational functions  ; 217                                         ;
+;     Dedicated logic registers      ; 89                                          ;
+; Total registers                    ; 89                                          ;
 ; Total pins                         ; 23                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -172,38 +173,41 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; Cathode_Controller.v             ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Cathode_Controller.v    ;         ;
-; Byte_BCD_Converter.v             ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v    ;         ;
-; Top.v                            ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v                   ;         ;
-; PWM_Divider.v                    ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v           ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
-; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/multcore.inc            ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/bypassff.inc            ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift.inc            ;         ;
-; multcore.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/multcore.tdf            ;         ;
-; csa_add.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/csa_add.inc             ;         ;
-; mpar_add.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
-; muleabz.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/muleabz.inc             ;         ;
-; mul_lfrg.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
-; mul_boothc.inc                   ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
-; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
-; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
-; dffpipe.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
-; mpar_add.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
-; addcore.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/addcore.inc             ;         ;
-; look_add.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/look_add.inc            ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
-; db/add_sub_mgh.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/db/add_sub_mgh.tdf      ;         ;
-; altshift.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift.tdf            ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
+; BCD_Cathode_Controller.v         ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Cathode_Controller.v ;         ;
+; BCD_Controller.v                 ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v         ;         ;
+; Cathode_Controller.v             ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Cathode_Controller.v     ;         ;
+; Refresh_Counter.v                ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Refresh_Counter.v        ;         ;
+; Byte_BCD_Converter.v             ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v     ;         ;
+; Top.v                            ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v                    ;         ;
+; PWM_Divider.v                    ; yes             ; User Verilog HDL File        ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v            ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf             ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc           ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.inc          ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/multcore.inc             ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/bypassff.inc             ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift.inc             ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/multcore.tdf             ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/csa_add.inc              ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mpar_add.inc             ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/muleabz.inc              ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mul_lfrg.inc             ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mul_boothc.inc           ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult.inc         ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_ded_mult_y.inc       ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/dffpipe.inc              ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/mpar_add.tdf             ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_add_sub.tdf          ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/addcore.inc              ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/look_add.inc             ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc  ;         ;
+; db/add_sub_mgh.tdf               ; yes             ; Auto-Generated Megafunction  ; /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/db/add_sub_mgh.tdf       ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/altshift.tdf             ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -211,20 +215,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 128       ;
+; Estimated Total logic elements              ; 217       ;
 ;                                             ;           ;
-; Total combinational functions               ; 128       ;
+; Total combinational functions               ; 217       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 21        ;
-;     -- 3 input functions                    ; 26        ;
-;     -- <=2 input functions                  ; 81        ;
+;     -- 4 input functions                    ; 67        ;
+;     -- 3 input functions                    ; 33        ;
+;     -- <=2 input functions                  ; 117       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 28        ;
-;     -- arithmetic mode                      ; 100       ;
+;     -- normal mode                          ; 90        ;
+;     -- arithmetic mode                      ; 127       ;
 ;                                             ;           ;
-; Total registers                             ; 58        ;
-;     -- Dedicated logic registers            ; 58        ;
+; Total registers                             ; 89        ;
+;     -- Dedicated logic registers            ; 89        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 23        ;
@@ -232,26 +236,32 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 58        ;
-; Total fan-out                               ; 515       ;
-; Average fan-out                             ; 2.22      ;
+; Maximum fan-out                             ; 87        ;
+; Total fan-out                               ; 891       ;
+; Average fan-out                             ; 2.53      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                           ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name ; Library Name ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------+
-; |Top                                           ; 128 (0)             ; 58 (0)                    ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Top                                                                                                                                 ; Top         ; work         ;
-;    |PWM_Divider:adc_clk_divider|               ; 40 (40)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:adc_clk_divider                                                                                                     ; PWM_Divider ; work         ;
-;    |PWM_Divider:servo_clk_divider|             ; 88 (75)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider                                                                                                   ; PWM_Divider ; work         ;
-;       |lpm_mult:Mult0|                         ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0                                                                                    ; lpm_mult    ; work         ;
-;          |multcore:mult_core|                  ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core                                                                 ; multcore    ; work         ;
-;             |mpar_add:padder|                  ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; mpar_add    ; work         ;
-;                |lpm_add_sub:adder[0]|          ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub ; work         ;
-;                   |add_sub_mgh:auto_generated| ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_mgh:auto_generated ; add_sub_mgh ; work         ;
-+------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+-------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                          ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node                         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Entity Name            ; Library Name ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
+; |Top                                               ; 217 (0)             ; 89 (0)                    ; 0           ; 0            ; 0       ; 0         ; 23   ; 0            ; |Top                                                                                                                                 ; Top                    ; work         ;
+;    |BCD_Cathode_Controller:bcd_cathode_controller| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|BCD_Cathode_Controller:bcd_cathode_controller                                                                                   ; BCD_Cathode_Controller ; work         ;
+;    |BCD_Controller:bcd_controller|                 ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|BCD_Controller:bcd_controller                                                                                                   ; BCD_Controller         ; work         ;
+;    |Byte_BCD_Converter:bcd_converter|              ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Byte_BCD_Converter:bcd_converter                                                                                                ; Byte_BCD_Converter     ; work         ;
+;    |Cathode_Controller:cathode_controller|         ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Cathode_Controller:cathode_controller                                                                                           ; Cathode_Controller     ; work         ;
+;    |PWM_Divider:adc_clk_divider|                   ; 40 (40)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:adc_clk_divider                                                                                                     ; PWM_Divider            ; work         ;
+;    |PWM_Divider:segment_clk_divider|               ; 42 (42)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:segment_clk_divider                                                                                                 ; PWM_Divider            ; work         ;
+;    |PWM_Divider:servo_clk_divider|                 ; 88 (75)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider                                                                                                   ; PWM_Divider            ; work         ;
+;       |lpm_mult:Mult0|                             ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0                                                                                    ; lpm_mult               ; work         ;
+;          |multcore:mult_core|                      ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core                                                                 ; multcore               ; work         ;
+;             |mpar_add:padder|                      ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder                                                 ; mpar_add               ; work         ;
+;                |lpm_add_sub:adder[0]|              ; 13 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]                            ; lpm_add_sub            ; work         ;
+;                   |add_sub_mgh:auto_generated|     ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|PWM_Divider:servo_clk_divider|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_mgh:auto_generated ; add_sub_mgh            ; work         ;
+;    |Refresh_Counter:refresh_counter|               ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Top|Refresh_Counter:refresh_counter                                                                                                 ; Refresh_Counter        ; work         ;
++----------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -260,14 +270,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 58    ;
-; Number of registers using Synchronous Clear  ; 56    ;
+; Total registers                              ; 89    ;
+; Number of registers using Synchronous Clear  ; 84    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 6:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Top|BCD_Controller:bcd_controller|Mux1 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -361,6 +380,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------------------------------------+
 
 
++-----------------------------------------------------------+
+; Port Connectivity Checks: "BCD_Controller:bcd_controller" ;
++-------------+-------+----------+--------------------------+
+; Port        ; Type  ; Severity ; Details                  ;
++-------------+-------+----------+--------------------------+
+; data_digit4 ; Input ; Info     ; Stuck at GND             ;
++-------------+-------+----------+--------------------------+
+
+
 +---------------------------------------------------------+
 ; Port Connectivity Checks: "PWM_Divider:adc_clk_divider" ;
 +------+-------+----------+-------------------------------+
@@ -370,23 +398,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "PWM_Divider:segment_clk_divider"                                                    ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; adc  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; pwm  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Byte_BCD_Converter:converter"                                                                            ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                  ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
-; bcd  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "PWM_Divider:segment_clk_divider" ;
++------+-------+----------+-----------------------------------+
+; Port ; Type  ; Severity ; Details                           ;
++------+-------+----------+-----------------------------------+
+; adc  ; Input ; Info     ; Stuck at GND                      ;
++------+-------+----------+-----------------------------------+
 
 
 +-----------------------------------------------------+
@@ -395,22 +413,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 23                          ;
-; cycloneiii_ff         ; 58                          ;
-;     SCLR              ; 56                          ;
-;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 130                         ;
-;     arith             ; 100                         ;
-;         2 data inputs ; 75                          ;
+; cycloneiii_ff         ; 89                          ;
+;     SCLR              ; 84                          ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 223                         ;
+;     arith             ; 127                         ;
+;         2 data inputs ; 102                         ;
 ;         3 data inputs ; 25                          ;
-;     normal            ; 30                          ;
-;         0 data inputs ; 4                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 21                          ;
+;     normal            ; 96                          ;
+;         0 data inputs ; 3                           ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 67                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.30                        ;
-; Average LUT depth     ; 3.64                        ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 4.03                        ;
 +-----------------------+-----------------------------+
 
 
@@ -419,7 +437,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -429,14 +447,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Jul 15 17:59:56 2021
+    Info: Processing started: Thu Jul 15 20:53:43 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Servo_Controller -c Servo_Controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file BCD_Cathode_Controller.v
     Info (12023): Found entity 1: BCD_Cathode_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Cathode_Controller.v Line: 1
-Warning (10229): Verilog HDL Expression warning at BCD_Controller.v(15): truncated literal to match 2 bits File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 15
-Warning (10229): Verilog HDL Expression warning at BCD_Controller.v(16): truncated literal to match 2 bits File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 16
 Info (12021): Found 1 design units, including 1 entities, in source file BCD_Controller.v
     Info (12023): Found entity 1: BCD_Controller File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Cathode_Controller.v
@@ -455,15 +471,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file Servo_C
 Info (12021): Found 1 design units, including 1 entities, in source file PWM_Divider.v
     Info (12023): Found entity 1: PWM_Divider File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 1
 Info (12127): Elaborating entity "Top" for the top level hierarchy
-Warning (10034): Output port "digit_led_cathodes" at Top.v(5) has no driver File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-Info (12128): Elaborating entity "Byte_BCD_Converter" for hierarchy "Byte_BCD_Converter:converter" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 13
 Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:segment_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 19
 Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(18): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 18
-Info (12128): Elaborating entity "Cathode_Controller" for hierarchy "Cathode_Controller:cathode_controller" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 24
-Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:adc_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 30
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:adc_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 25
 Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(18): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 18
-Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:servo_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 38
+Info (12128): Elaborating entity "PWM_Divider" for hierarchy "PWM_Divider:servo_clk_divider" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 32
 Warning (10230): Verilog HDL assignment warning at PWM_Divider.v(16): truncated value with size 32 to match size of target (1) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
+Info (12128): Elaborating entity "Byte_BCD_Converter" for hierarchy "Byte_BCD_Converter:bcd_converter" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 37
+Warning (10230): Verilog HDL assignment warning at Byte_BCD_Converter.v(13): truncated value with size 32 to match size of target (4) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v Line: 13
+Warning (10230): Verilog HDL assignment warning at Byte_BCD_Converter.v(17): truncated value with size 32 to match size of target (4) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v Line: 17
+Warning (10230): Verilog HDL assignment warning at Byte_BCD_Converter.v(19): truncated value with size 32 to match size of target (4) File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Byte_BCD_Converter.v Line: 19
+Info (12128): Elaborating entity "Refresh_Counter" for hierarchy "Refresh_Counter:refresh_counter" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 42
+Info (12128): Elaborating entity "Cathode_Controller" for hierarchy "Cathode_Controller:cathode_controller" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 47
+Info (12128): Elaborating entity "BCD_Controller" for hierarchy "BCD_Controller:bcd_controller" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 56
+Warning (10235): Verilog HDL Always Construct warning at BCD_Controller.v(13): variable "data_digit1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 13
+Warning (10235): Verilog HDL Always Construct warning at BCD_Controller.v(14): variable "data_digit2" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 14
+Warning (10235): Verilog HDL Always Construct warning at BCD_Controller.v(15): variable "data_digit3" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 15
+Warning (10235): Verilog HDL Always Construct warning at BCD_Controller.v(16): variable "data_digit4" is read inside the Always Construct but isn't in the Always Construct's Event Control File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/BCD_Controller.v Line: 16
+Info (12128): Elaborating entity "BCD_Cathode_Controller" for hierarchy "BCD_Cathode_Controller:bcd_cathode_controller" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 61
 Info (278001): Inferred 1 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "PWM_Divider:servo_clk_divider|Mult0" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
 Info (12130): Elaborated megafunction instantiation "PWM_Divider:servo_clk_divider|lpm_mult:Mult0" File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/PWM_Divider.v Line: 16
@@ -483,31 +508,19 @@ Info (12131): Elaborated megafunction instantiation "PWM_Divider:servo_clk_divid
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_mgh.tdf
     Info (12023): Found entity 1: add_sub_mgh File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/db/add_sub_mgh.tdf Line: 23
 Info (12131): Elaborated megafunction instantiation "PWM_Divider:servo_clk_divider|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "PWM_Divider:servo_clk_divider|lpm_mult:Mult0" File: /home/panchis/intelFPGA_lite/20.1/quartus/libraries/megafunctions/lpm_mult.tdf Line: 352
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "digit_trans_cathodes[0]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
-    Warning (13410): Pin "digit_trans_cathodes[1]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
-    Warning (13410): Pin "digit_trans_cathodes[2]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
-    Warning (13410): Pin "digit_trans_cathodes[3]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 4
-    Warning (13410): Pin "digit_led_cathodes[0]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[1]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[2]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[3]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[4]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[5]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[6]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
-    Warning (13410): Pin "digit_led_cathodes[7]" is stuck at GND File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
+    Warning (13410): Pin "digit_led_cathodes[7]" is stuck at VCC File: /home/panchis/Desktop/Prosthetic_Hand/Controller/Servo_Controller/Top.v Line: 5
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 151 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 240 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 128 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
+    Info (21061): Implemented 217 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 435 megabytes
-    Info: Processing ended: Thu Jul 15 18:00:05 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Thu Jul 15 20:53:53 2021
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:27
 
 
