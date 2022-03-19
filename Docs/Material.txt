@@ -1,8 +1,15 @@
 4 Rodamientos de la misma medida.
-
+---------------------------------------------------------------------------------------
 2 - Rodamiento (Metacarpophalangeal Joint) -> Diametro Exterior de 1 cm.
 1 - Rodamiento (Proximal Interphalangeal Joint) -> Diametro exterior de 1.5cm.
 1 - Rodamiento (Distal Interphalangeal Joint) -> Diametro exterioe de 2cm.
+---------------------------------------------------------------------------------------
+Total: 4 * 5 = 20 unidades.
 
 Recursos.
-AliExpress -> https://es.aliexpress.com/item/1005002275147771.html?spm=a2g0o.productlist.0.0.4f4f53b9jHp6l2&algo_pvid=d61723a1-d8d9-4846-a1f2-ee69e689aa49&algo_exp_id=d61723a1-d8d9-4846-a1f2-ee69e689aa49-20&pdp_ext_f=%7B%22sku_id%22%3A%2212000020839640285%22%7D&pdp_pi=-1%3B25.63%3B-1%3B-1%40salePrice%3BMXN%3Bsearch-mainSearch
+Rodamientos 685zz (11mm Diametro exterior, 5mm Diametro interior, 5mm profundidad)
+Rodamientos 603zz (9mm Diametro exterior, 3mm Diametro interior, 5mm profundidad)
+
+AliExpress ->
+- https://es.aliexpress.com/item/1005002275147771.html?spm=a2g0o.productlist.0.0.4f4f53b9jHp6l2&algo_pvid=d61723a1-d8d9-4846-a1f2-ee69e689aa49&algo_exp_id=d61723a1-d8d9-4846-a1f2-ee69e689aa49-20&pdp_ext_f=%7B%22sku_id%22%3A%2212000020839640285%22%7D&pdp_pi=-1%3B25.63%3B-1%3B-1%40salePrice%3BMXN%3Bsearch-mainSearch
+---------------------------------------------------------------------------------------
